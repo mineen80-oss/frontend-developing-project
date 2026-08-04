@@ -1,0 +1,15 @@
+/* Element selector */
+body{ 
+    font-family: 'Times New Roman', Times, serif;
+margin: 5rem;
+background-color: gold;
+}
+
+h2{
+    color:  brown;
+    background-color: aliceblue;
+    padding: 1rem;
+
+
+
+}
