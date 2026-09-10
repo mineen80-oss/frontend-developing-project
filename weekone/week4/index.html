@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Javascript Example</title>
+</head>
+<body>
+    <h2>this line is straight html</h2>
+    <h3>
+        <script type = "text/javascript"> 
+        // declaring variables for student name, scores, total, and average
+           var studentName = "Lawrence Mineen";
+           var score = [85, 72, 91];
+           var total = 0;
+           var average;
+           for(var i = 0; i < score.length; i++){
+               total += score[i];
+           }
+           average = total / score.length;
+
+
+        console.log('student:' + studentName + 'score:' + score);
+
+         console.log(typeof score);
+            
+           // for loop
+           for(var i = 0; i < score.length; i++)
+              total += score[i]; 
+            console.log('score' + (i+1)  + ":" + score[i]);
+
+            average = total / score.length;
+            console.log('average:' + average);
+
+         // using if / else if/ else
+            var grade;
+            if(average >= 90){
+                grade = "A";
+            } else if(average >= 80){
+                grade = "B";
+            } else if(average >= 70){
+                grade = "C";
+            } else if(average >= 60){
+                grade = "D";
+            } else {
+                grade = "F";
+            }
+
+            console.log('student:' + studentName + 'average:' + average + 'grade:' + grade);
+
+          // using switch statement to determine message based on grade
+            var message;
+            
+            switch(grade){
+                case "A":
+                    message = "outstanding";
+                    break;
+                case "B":
+                    message = "greatwork";
+                    break;
+                case "C":
+                    message = "you passed";
+                    break;
+                case "D":
+                    message = "barely passing - review the materials";
+                    break;
+                
+                default:
+                    message = "Did not pass - please see the insturctor";
+            }
+
+
+            console.log('message:' + message);
+
+            //
+
+        </script>
+    </h3>
+
+    <script type="text/javascript"  src="script.js"></script>
+
+
+    
+</body>
+</html>
