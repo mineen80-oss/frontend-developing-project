@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+<body>
+
+    <!-- Heading  -->
+    <h1>My Shopping Cart — open the console to see your summary.</h1>
+
+    <script type="text/javascript">
+        
+        // TASK 2: Create parallel arrays for GROCERY names and prices
+        let productNames = [" Cassavas", "Bananas", "Mangoes", "Oranges", "Apples"];
+        let productPrices = [15.00, 25.00, 30.00, 65.00, 85.00];
+
+        // Variables to track totals and discounts
+        let subtotal = 0;
+        let discountRate = 0;
+        let discountAmount = 0;
+        let finalTotal = 0;
+
+        console.log("--- TASK 3: Itemized Cart Items ---");
+        
+        // TASK 3: Loop through productPrices to calculate subtotal and print items
+        for (let i = 0; i < productPrices.length; i++) {
+            let currentName = productNames[i];
+            let currentPrice = productPrices[i];
+            
+            // Print each item to the console
+            console.log("Product: " + currentName + " | Price: $" + currentPrice.toFixed(2));
+            
+            // Add the price to our subtotal accumulator
+            subtotal += currentPrice;
+        }
+
+        // TASK 4: Conditional logic to apply the correct discount rate
+        if (subtotal >= 200) {
+            discountRate = 0.20; // 20% discount
+        } else if (subtotal >= 100) {
+            discountRate = 0.10; // 10% discount
+        } else {
+            discountRate = 0.00; // No discount
+        }
+
+        // Calculate discount amount and final total
+        discountAmount = subtotal * discountRate;
+        finalTotal = subtotal - discountAmount;
+
+        // BONUS CHALLENGE: Prompt for coupon code up to 3 times
+        let couponAttempts = 0;
+        let couponApplied = false;
+        const correctCoupon = "SAVE10";
+
+        // Keep asking while they haven't gotten it right AND have tried less than 3 times
+        while (!couponApplied && couponAttempts < 3) {
+            let userInput = prompt("Enter a coupon code (Optional. Attempt " + (couponAttempts + 1) + " of 3):");
+            
+            // If they cancel or leave it blank, stop asking
+            if (userInput === null) {
+                break;
+            }
+
+            if (userInput === correctCoupon) {
+                couponApplied = true;
+                // Apply an additional 10% off the already-discounted total
+                let bonusDiscount = finalTotal * 0.10;
+                finalTotal -= bonusDiscount;
+                console.log("\n--- BONUS ---");
+                console.log("Success! Code 'SAVE10' applied. Extra 10% off taken.");
+            } else {
+                couponAttempts++;
+            }
+        }
+
+        // Print coupon outcome if they failed 3 times
+        if (!couponApplied && couponAttempts === 3) {
+            console.log("\n--- BONUS ---");
+            console.log("Coupon attempts exhausted. No additional discount applied.");
+        }
+
+        // TASK 5: Print a formatted checkout summary
+        console.log("\n--- TASK 5: Checkout Summary ---");
+        console.log("Number of Items: " + productPrices.length);
+        console.log("Subtotal: $" + subtotal.toFixed(2));
+        console.log("Discount Percentage: " + (discountRate * 100) + "%");
+        console.log("Discount Amount: $" + discountAmount.toFixed(2));
+        console.log("Final Total: $" + finalTotal.toFixed(2));
+
+        // TASK 6: Array Operations
+        console.log("\n--- TASK 6: Array Operations ---");
+
+        // Use push() to add one more product and price
+        productNames.push("Fresh Strawberries");
+        productPrices.push(6.50);
+        console.log("Added 'Fresh Strawberries' to cart using push().");
+
+        // Use join() to print all product names on one line, separated by commas
+        let combinedNames = productNames.join(", ");
+        console.log("All products (joined): " + combinedNames);
+
+        // Use sort() to print the product names in alphabetical order
+        productNames.sort();
+        console.log("Alphabetical product list: " + productNames.join(", "));
+
+    </script>
+</body>
+</html>

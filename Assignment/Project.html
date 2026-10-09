@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mineen Airline | Fly. Stay. Explore.</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/main.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <a class="logo" href="index.html">MINEEN AIRLINE</a>
+
+  <button class="menu-button" id="menuButton" type="button">Menu</button>
+
+  <nav class="nav" id="mainNav">
+    <a class="active" href="index.html">Home</a>
+    <a href="discovery.html">Discovery</a>
+    <a href="journey.html">Journey</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">MINEEN AIRLINE · FLY. STAY. EXPLORE.</p>
+    <h1>Your journey starts with more than a flight.</h1>
+    <p class="hero-text">
+      Book flights, find hotels, discover adventures, and plan your trip from one place.
+    </p>
+
+    <div class="hero-buttons">
+      <a class="button primary" href="#booking">Start Your Journey</a>
+      <a class="button outline" href="discovery.html">Discover Places</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="plane">✈</div>
+    <p>Fly. Stay. Explore.</p>
+  </div>
+</section>
+
+<section class="booking" id="booking">
+  <div class="section-title">
+    <p>PLAN</p>
+    <h2>Plan your trip</h2>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" type="button" data-service="Flights">Flights</button>
+    <button class="tab" type="button" data-service="Hotels">Hotels</button>
+    <button class="tab" type="button" data-service="Packages">Packages</button>
+    <button class="tab" type="button" data-service="Adventures">Adventures</button>
+    <button class="tab" type="button" data-service="Cars">Cars</button>
+  </div>
+
+  <form class="search-form" id="searchForm">
+    <label>
+      From
+      <input type="text" value="Monrovia (ROB)">
+    </label>
+
+    <label>
+      To
+      <input type="text" placeholder="Where are you going?">
+    </label>
+
+    <label>
+      Departure
+      <input type="date">
+    </label>
+
+    <label>
+      Return
+      <input type="date">
+    </label>
+
+    <label>
+      Travelers
+      <select>
+        <option>1 Adult</option>
+        <option>2 Adults</option>
+        <option>Family</option>
+      </select>
+    </label>
+
+    <button class="search-button" type="submit" id="searchButton">Search Flights</button>
+  </form>
+
+  <p class="message" id="searchMessage"></p>
+</section>
+
+<section class="section">
+  <div class="section-header">
+    <div>
+      <p class="section-kicker">DISCOVERY</p>
+      <h2>Popular destinations</h2>
+      <p>Explore exciting destinations in West Africa and beyond.</p>
+    </div>
+  </div>
+
+  <div class="grid four">
+    <article class="card">
+      <div class="card-image blue-gold">ACCRA</div>
+      <div class="card-content">
+        <h3>Accra, Ghana</h3>
+        <p>Coast, culture and vibrant city life.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image green-orange">ABIDJAN</div>
+      <div class="card-content">
+        <h3>Abidjan, Côte d’Ivoire</h3>
+        <p>Food, nightlife and modern city experiences.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image navy-gold">DAKAR</div>
+      <div class="card-content">
+        <h3>Dakar, Senegal</h3>
+        <p>Atlantic views and West African culture.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image teal-gold">FREETOWN</div>
+      <div class="card-content">
+        <h3>Freetown, Sierra Leone</h3>
+        <p>Beaches, hills and coastal escapes.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section adventure">
+  <div class="section-header">
+    <div>
+      <p class="section-kicker gold">ADVENTURE</p>
+      <h2>Featured adventures</h2>
+      <p>Discover nature, culture and memorable experiences.</p>
+    </div>
+  </div>
+
+  <div class="grid four">
+    <article class="simple-card">
+      <h3>Kpatawee Waterfalls</h3>
+      <p>Nature, swimming and a refreshing weekend escape.</p>
+    </article>
+
+    <article class="simple-card">
+      <h3>Robertsport Coast</h3>
+      <p>Surfing, beaches, sunsets and relaxing stays.</p>
+    </article>
+
+    <article class="simple-card">
+      <h3>Sapo National Park</h3>
+      <p>Explore Liberia’s rainforest and biodiversity.</p>
+    </article>
+
+    <article class="simple-card">
+      <h3>Lake Piso Escape</h3>
+      <p>Boat rides, fishing communities and peaceful scenery.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-header">
+    <div>
+      <p class="section-kicker">OFFERS</p>
+      <h2>Travel offers made simple</h2>
+      <p>Combine flights, hotels and experiences in one journey.</p>
+    </div>
+  </div>
+
+  <div class="grid three">
+    <article class="offer hotel">
+      <span>HOTEL</span>
+      <h3>Stay your way</h3>
+      <p>Find hotels, resorts and guesthouses for your budget.</p>
+      <a href="services.html">Find a hotel</a>
+    </article>
+
+    <article class="offer package">
+      <span>PACKAGE</span>
+      <h3>Flight + Hotel</h3>
+      <p>Build a complete trip with air travel and accommodation.</p>
+      <a href="services.html">Build a package</a>
+    </article>
+
+    <article class="offer weekend">
+      <span>WEEKEND</span>
+      <h3>Adventure escapes</h3>
+      <p>Choose simple weekend experiences with activities and stays.</p>
+      <a href="discovery.html">Explore escapes</a>
+    </article>
+  </div>
+</section>
+
+<section class="cta">
+  <div>
+    <p>MINEEN AIRLINE</p>
+    <h2>One platform. Your whole journey.</h2>
+    <span>Fly. Stay. Explore.</span>
+  </div>
+  <a class="button gold-button" href="journey.html">Plan a Journey</a>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div>
+    <strong>MINEEN AIRLINE</strong>
+    <p>Fly. Stay. Explore.</p>
+  </div>
+
+  <div class="footer-links">
+    <a href="discovery.html">Discovery</a>
+    <a href="journey.html">Journey</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <p class="copyright">© 2026 Mineen Airline. Concept website.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
